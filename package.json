@@ -1,5 +1,13 @@
 {
+  "name": "countrys",
+  "version": "0.1.0",
+  "homepage": "https://th3-rocha.github.io/TUBLE",
+  "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,5 +19,8 @@
     "react-dom": "^18.2.0",
     "styled-component": "^2.8.0",
     "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
