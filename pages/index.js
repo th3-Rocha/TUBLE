@@ -5,7 +5,7 @@ import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
 
 function HomePage() {
-  const estilosDaHomePage = { };
+  const estilosDaHomePage = {  };
 
 
   return (
@@ -32,6 +32,11 @@ const StyledHeader = styled.div`
       width: 80px;
       height: 80px;
       border-radius:50%;
+      
+    }
+    p{
+      color: #666666;
+      font-size: 16px;
     }
     .banner{
       border-radius:0%;
@@ -40,6 +45,7 @@ const StyledHeader = styled.div`
       object-fit: cover;
     }
     .user-info {
+      padding-left: 32px;
       margin-top: 5%;
       display: flex;
       align-items: center;
@@ -48,23 +54,32 @@ const StyledHeader = styled.div`
 
   `;
 
+
+
 const StyledFavs = styled.div`
 
-margin-top: 1%;
+font-size: small;
 display: flex;
-align-items: center;
-section{
-  display: flex;
-  align-items: center;
-  font-weight:400;
-
-}
+flex-direction: row;
+grid-gap: 30px;
+padding-left: 20px;
 img{
   width: 100px;
   height: 100px;
   border-radius:50%;
 }
+a{
+  width: 100px;
+  text-align: center;
+}
+h4{
+  color: black;
+  text-decoration: none;
+
+}
 `;
+
+
 
 function Header() {
   "asdfasd ${eggCount}"
@@ -118,25 +133,23 @@ function Favorites(props){
  
   console.log(props.fav);
   return (
-    <StyledTimeline>
-      
-      <section>
-        <h2>GitTube Favorites</h2>
+    
+      <StyledTimeline>
+        <h2 style={{paddingLeft: 20 + 'px'}}  >GitTube Favorites</h2>
+        
         <StyledFavs>
           {props.fav.map((favs) => {
             return (
               <a href={`https://github.com/${favs.github}`}>
-                <a>
-                    <img src={`https://github.com/${favs.github}.png`} />
-                  <h4>
-                    @{favs.github}
-                  </h4>
-                </a>
+                  <img src={`https://github.com/${favs.github}.png`} />
+                <h4>
+                  @{favs.github}
+                </h4>
               </a>
             )
           })}
         </StyledFavs>
-      </section>
-    </StyledTimeline>
+      </StyledTimeline>
+     
   )
 }

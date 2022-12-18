@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
+
+
 export const StyledTimeline = styled.div`
   flex: 1;
   width: 100%;
   padding: 16px;
   overflow: hidden;
+  background-color: #F9F9F9;
+  
   h2 {
     font-size: 16px;
     margin-bottom: 16px;
@@ -27,12 +31,13 @@ export const StyledTimeline = styled.div`
       
       width: calc(100vw - 16px * 4);
       display: grid;
-      grid-gap: 16px;
+      grid-gap: 20px;
       grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
       grid-auto-flow: column;
       grid-auto-columns: minmax(200px,1fr);
-      overflow-x: scroll;
+      overflow-x: hidden;
       scroll-snap-type: x mandatory;
+      overflow: hidden;
       a {
         scroll-snap-align: start;
         span {
