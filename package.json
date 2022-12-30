@@ -1,7 +1,7 @@
 {
   "name": "TUBLE",
   "version": "0.1.0",
-  "homepage": "https://th3-rocha.github.io/TUBLE",
+  "homepage": "https://th3-rocha.github.io/GitTube-React",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
